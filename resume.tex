@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+
+\usepackage{marvosym}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{letterpaper,left=0.3in,right=0.3in,top=0.4in,bottom=0.4in}
+
+\newcommand{\sectionHeading}[1]{
+\section*{\small{#1}}
+\vspace{-8pt}
+\hrule
+\vspace{8pt}
+}
+
+
+\newcommand{\experienceSectionSubheading}[6]{
+  \vspace{-1pt}
+    \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
+      \small{\textbf{#1}} & \small{#2} \\
+      \small{\textit{#3}} & \small{\textit{#4}} \\
+      \small{\textit{#5}} & \small{\textit{#6}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\experienceSectionSubheadingAlternate}[6]{
+  \vspace{-1pt}
+    \small{\textbf{Morgan Stanley \hfill New York, NY}} \\
+    \small{\textit{#3} \hfill \textit{#4}} \\
+    \small{\textit{#5} \hfill \textit{#6}} \\
+    \vspace{-15pt}
+}
+
+\newcommand {\projectSectionSubheading}[3]{
+    \noindent \small{\textbf{#1, }\textit{#2\hfill #3} }\vspace{-6pt}
+}
+
+\newcommand{\educationSectionSubheading}[3]{
+    \vspace{-1pt}
+    \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
+      \small{\textbf{#1, }\textit{#2}} & \small{\textit{#3}} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\sectionListStart}{\begin{itemize}[label={\small{\textbullet}},noitemsep]}
+
+\newcommand{\sectionListEnd}{\end{itemize}}
+
+\newcommand{\sectionListItem}[1]{\item \small{#1}}
+
+
+\newcommand{\sectionListItemWithDate}[2]{\item \small{#1 \hfill \textit{#2}} \\\vspace{-10pt}}
+
+%RESUME STARTS HERE -------------------------------------------->
+
+%%%%%%%%%%%%%%%%%%%%%% INTRO AND CONTACT INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+\LARGE{\textbf{AADARSH KENIA}}\\
+\vspace{4pt}
+\small{\Letter \hspace{1mm}akenia@cs.stonybrook.edu} | \Telefon \hspace{1mm}631 974 8070
+% \small{\Letter \hspace{1mm}akenia@cs.stonybrook.edu} | \Telefon \hspace{1mm}631 974 8070
+% \small{\Telefon \hspace{1mm}631 974 8070}\\
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% WORK EXPERIENCE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{WORK EXPERIENCE}
+\experienceSectionSubheadingAlternate
+{Morgan Stanley}{New York, NY}
+{Technology Associate}{Nov '16 - Present}
+{Technology Analyst}{Aug '16 - Nov '16}
+\sectionListStart
+    \sectionListItem
+        Designed and implemented a RESTful middleware through API-first design principles(Swagger) that serves firm's online portal and significantly improves document collaboration experience for clients.
+    % \sectionListItem
+    %     Implemented a metadata routing module as part of an in-house document management platform that is set to replace a legacy system and help save \$1.7M annually.
+    \sectionListItem
+        Built a metadata routing component as part of an in-house document management platform that is set to replace a legacy system and cut costs by \$1.7M annually.
+    \sectionListItem
+        Reduced interfacing limitations of workflow systems by implementing a gateway component that exposes REST APIs  and enables pub-sub capabilities to message queues, refactored the gateway and increased unit test coverage from 50\% to 70\%. 
+    \sectionListItem
+        Ensured stability of a back-end system by throttling number of requests sent per second, implemented periodic retries of failed messages to enable automated recovery.
+    \sectionListItem
+        Promoted the concept of API-first design within the team for good software development practices.
+\sectionListEnd
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{EDUCATION}
+\educationSectionSubheading
+{Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
+\sectionListStart
+    \sectionListItem
+        Coursework: Operating Systems, Algorithms, Asynchronous Systems, Computational Biology, Parallel Computing. 
+\sectionListEnd
+
+\educationSectionSubheading
+{University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{PROJECTS}
+\projectSectionSubheading{GDFS}{Hobby project}{Ongoing}
+\sectionListStart
+    \sectionListItem
+        Wrote a python implementation of file system in user space (FUSE), that automatically backs up files from local file system to Google Drive based on callbacks. Python, Drive SDK, FUSE lib.
+\sectionListEnd
+
+\projectSectionSubheading{Unify}{Hobby project}{2016}
+\sectionListStart
+    \sectionListItem
+        Android app that simplifies task management by combining events from Google Calendar and Evernote. Android, Calendar \& Evernote APIs.
+\sectionListEnd
+
+\projectSectionSubheading{SBUnix Operation System}{Stony Brook University}{2015}
+\sectionListStart
+    \sectionListItem
+        Built an X86\_64 pre-emptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all sys calls from scratch. C, ASM, QEMU emulator.
+        
+
+\sectionListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% LEADERSHIP AND AWARDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{LEADERSHIP AND AWARDS}
+\sectionListStart
+    \sectionListItemWithDate
+        {Intern Mentorship - Mentored a summer intern at Morgan Stanley by providing guidance on internal technologies, firm values, project blockers, etc. to help them have a fulfilling internship experience.}{2017} 
+    \sectionListItemWithDate
+        {Awarded `Rookie of the year, Field \& Client Tech' - one of the top performing employees at Morgan Stanley.}{2017}
+    \sectionListItemWithDate
+        {Volunteer, Stony Brook Child Care Services - Assist in overall personality development of children by engaging their involvement in various fun learning events.}{2015}
+\sectionListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{LANGUAGES AND TECHNOLOGIES}
+\sectionListStart
+    \sectionListItem
+        Java (Proficient), Spring, Google Protocol Buffers, SQL, Git, IntelliJ IDEA.
+    \sectionListItem
+        C, C++, JavaScript, Python, Android. 
+\sectionListEnd
+
+%RESUME ENDS HERE -------------------------------------------->
+\end{document}

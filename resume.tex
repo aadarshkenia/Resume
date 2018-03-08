@@ -38,12 +38,62 @@
     \noindent \small{\textbf{#1, }\textit{#2\hfill #3} }\vspace{-6pt}
 }
 
-\newcommand{\educationSectionSubheading}[3]{
-    \vspace{-1pt}
-    \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
-      \small{\textbf{#1, }\textit{#2}} & \small{\textit{#3}} \\
-    \end{tabular*}\vspace{-8pt}
+% \newcommand{\educationSectionSubheading}[3]{
+%     \vspace{-1pt}
+%     \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
+%       \small{\textbf{#
+\documentclass[12pt]{article}
+
+\usepackage{marvosym}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{letterpaper,left=0.3in,right=0.3in,top=0.4in,bottom=0.4in}
+
+\newcommand{\sectionHeading}[1]{
+\section*{\small{#1}}
+\vspace{-8pt}
+\hrule
+\vspace{8pt}
 }
+
+
+\newcommand{\experienceSectionSubheading}[6]{
+  \vspace{-1pt}
+    \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
+      \small{\textbf{#1}} & \small{#2} \\
+      \small{\textit{#3}} & \small{\textit{#4}} \\
+      \small{\textit{#5}} & \small{\textit{#6}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\experienceSectionSubheadingAlternate}[6]{
+  \vspace{-1pt}
+    \small{\textbf{Morgan Stanley \hfill New York, NY}} \\
+    \small{\textit{#3} \hfill \textit{#4}} \\
+    \small{\textit{#5} \hfill \textit{#6}} \\
+    \vspace{-15pt}
+}
+
+\newcommand {\projectSectionSubheading}[3]{
+    \noindent \small{\textbf{#1, }\textit{#2\hfill #3} }\vspace{-6pt}
+}
+
+% \newcommand{\educationSectionSubheading}[3]{
+%     \vspace{-1pt}
+%     \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
+%       \small{\textbf{#1, }\textit{#2}} & \small{\textit{#3}} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+\newcommand{\educationSectionSubheading}[3]{
+    \noindent \small{\textbf{#1, }\textit{#2 \hfill #3}} \vspace{-20pt}\\
+}
+
 
 \newcommand{\sectionListStart}{\begin{itemize}[label={\small{\textbullet}},noitemsep]}
 

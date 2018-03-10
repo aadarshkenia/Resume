@@ -7,7 +7,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{geometry}
-\geometry{letterpaper,left=0.3in,right=0.3in,top=0.5in,bottom=0.45in}
+\pagenumbering{gobble}
+\geometry{letterpaper,left=0.3in,right=0.3in,top=0.4in,bottom=0.3in}
+\setitemize{topsep=10pt,itemsep=-2pt}
+
 
 \newcommand{\sectionHeading}[1]{
 \section*{\small{#1}}
@@ -38,20 +41,16 @@
     \noindent \small{\textbf{#1} (\textit{#2}) | #4 \hfill #3}\vspace{-6pt}
 }
 
-% \newcommand{\educationSectionSubheading}[3]{
-%     \vspace{-1pt}
-%     \noindent \begin{tabular*}{1.01\linewidth}{l@{\extracolsep{\fill}}r}
-%       \small{\textbf{#1, }\textit{#2}} & \small{\textit{#3}} \\
-%     \end{tabular*}\vspace{-8pt}
-% }
-
 
 \newcommand{\educationSectionSubheading}[3]{
     \noindent \small{\textbf{#1, }\textit{#2 \hfill #3}} \vspace{-20pt}\\
 }
 
+% \newcommand{\sectionListStart}{\begin{itemize}[label={\small{\textbullet}},noitemsep]}
 
-\newcommand{\sectionListStart}{\begin{itemize}[label={\small{\textbullet}},noitemsep]}
+\newcommand{\sectionListStart}{
+    \begin{itemize}[label={\small{\textbullet}}, leftmargin=20pt] %leftmargin indicates spacing before bullet.
+}
 
 \newcommand{\sectionListEnd}{\end{itemize}}
 
@@ -67,7 +66,7 @@
 \begin{center}
 \LARGE{\textbf{AADARSH KENIA}}\\
 \vspace{4pt}
-\small{\Letter \hspace{1mm}akenia@cs.stonybrook.edu} | \Telefon \hspace{1mm}631 974 8070
+\small{\Letter \hspace{2mm}akenia@cs.stonybrook.edu} | \Telefon \hspace{2mm}631 974 8070
 % \small{\Letter \hspace{1mm}akenia@cs.stonybrook.edu} | \Telefon \hspace{1mm}631 974 8070
 % \small{\Telefon \hspace{1mm}631 974 8070}\\
 \end{center}
@@ -80,19 +79,20 @@
 {Technology Analyst}{Aug '16 - Nov '16}
 \sectionListStart
     \sectionListItem
-        Used a novel approach of API-first design principles to implement a RESTful middleware that signficantly improves document collaboration experience for clients.
-    \sectionListItem
-        Reduced interfacing limitations of a back-end system (BPM) by implementing a Gateway component that exposes REST APIs and publish-subscribe capabilities over messaging queues, increased its code coverage from 50\% to 70\%.
+        Used a novel approach of API-first design to implement a RESTful middleware that significantly improves document collaboration experience for clients.
 
     \sectionListItem
-        Implemented a module for routing document metadata to workflows as part of decommissioning a legacy system, thereby expected to cut costs by \$1.7M annually.
+        Reduced interfacing limitations of a back-end system (BPM) by implementing a Gateway that exposes REST APIs and pub-sub capabilities over messaging queues, increased its code coverage from 50\% to 70\%.
 
     \sectionListItem
-        Ensured stability of the BPM platform by throttling number of requests sent per second, automated the process of system recovery by periodically retrying failed requests.
+        Implemented a component for routing document metadata as part of an in-house system that would decommission legacy and hence expected to save the firm \$1.7M annually.
+        
     \sectionListItem
-        Worked with business to gather requirements from real-world business problems and helped devise technical solutions to them.
+        Automated the process of BPM plant's recovery from failed requests through periodic retries using message queues, ensured its stability by throttling requests sent per second. 
+        
     \sectionListItem
-        Promoted the concept of API-first design within the team for good software development practices.
+        Promoted the concept of API-first design principles within the firm for good software development practices.
+        
 \sectionListEnd
 
 
@@ -114,19 +114,19 @@
 \projectSectionSubheading{GDFS}{Hobby project}{Ongoing}{Python, Drive SDK, FUSE library}
 \sectionListStart
     \sectionListItem
-        Wrote an implementation of file system in user space (FUSE), that automatically backs up files from local file system to Google Drive based on callbacks. 
+        Implemented a version of file system in user space (FUSE), that automatically backs up files from local file system to Google Drive based on callbacks. 
 \sectionListEnd
 
-% \projectSectionSubheading{Unify}{Hobby project}{2016}
-% \sectionListStart
-%     \sectionListItem
-%         Android app that simplifies task management by combining events from Google Calendar and Evernote. Android, Calendar \& Evernote APIs.
-% \sectionListEnd
+\projectSectionSubheading{Unify}{Hobby project}{2016}{Android, Calendar \& Evernote APIs}
+\sectionListStart
+    \sectionListItem
+        Built an app that simplifies task management by displaying a unified view of events from Google Calendar and Evernote.
+\sectionListEnd
 
 \projectSectionSubheading{SBUnix Operation System}{Stony Brook University}{2015}{C, ASM, QEMU emulator}
 \sectionListStart
     \sectionListItem
-        Built an X86\_64 pre-emptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all sys calls from scratch. 
+        Built an X86\_64 preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. 
         
 
 \sectionListEnd
@@ -135,20 +135,20 @@
 \sectionHeading{LEADERSHIP AND AWARDS}
 \sectionListStart
     \sectionListItemWithDate
-        {Morgan Stanley Intern Mentorship Program - provided guidance on internal technologies and firm values to help interns have a fulfilling internship experience.}{2017} 
+        {Morgan Stanley Intern Mentorship - provided guidance on internal technologies and firm values to help interns succeed and have a fulfilling internship experience.}{2017} 
     \sectionListItemWithDate
         {Awarded `Rookie of the year, Field \& Client Tech' - one of the top performing employees at Morgan Stanley.}{2017}
     \sectionListItemWithDate
-        {Volunteer, Stony Brook Child Care Services - Assist in overall personality development of children by engaging their involvement in various fun learning events.}{2015}
+        {Volunteer, Stony Brook Child Care Services - Assisted in overall personality development of children by engaging their involvement in various fun learning events.}{2015}
 \sectionListEnd
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{LANGUAGES AND TECHNOLOGIES}
 \sectionListStart
     \sectionListItem
-        Java (Proficient), Spring, Google Protocol Buffers, SQL, Git, IntelliJ IDEA.
+        Java (Proficient), Spring framework, Google Protocol Buffers, SQL, Git, IntelliJ IDEA.
     \sectionListItem
-        C, C++, JavaScript, Python, Android. 
+        C, Python, C++, JavaScript, Android. 
 \sectionListEnd
 
 %RESUME ENDS HERE -------------------------------------------->

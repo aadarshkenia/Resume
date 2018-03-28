@@ -8,12 +8,21 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{geometry}
 \pagenumbering{gobble}
-\geometry{letterpaper,left=0.3in,right=0.3in,top=0.35in,bottom=0.25in}
-\setitemize{topsep=10pt,itemsep=-2pt}
+\geometry{letterpaper,left=0.3in,right=0.3in,top=0.30in,bottom=0.25in}
+\setitemize{topsep=10pt,itemsep=-5pt}
 
 
 \newcommand{\sectionHeading}[1]{
+\vspace{-15pt}
 \section*{\small{#1}}
+\vspace{-10pt}
+\hrule
+\vspace{8pt}
+}
+
+\newcommand{\sectionHeadingWithLink}[2]{
+\vspace{-15pt}
+\section*{\small{#1 \textit{#2}}}
 \vspace{-10pt}
 \hrule
 \vspace{8pt}
@@ -24,30 +33,40 @@
     \small{\textbf{Morgan Stanley \hfill New York, NY}} \\
     \small{\textit{#3} \hfill \textit{#4}} \\
     \small{\textit{#5} \hfill \textit{#6}} \\
-    \vspace{-15pt}
-}
-
-\newcommand {\projectSectionSubheading}[4]{
-    \noindent \small{\textbf{#1} (\textit{#2}) | #3 \hfill \textit{#4}} \\
     \vspace{-20pt}
 }
 
-
-\newcommand{\educationSectionSubheading}[3]{
-    \noindent \small{\textbf{#1, }\textit{#2 \hfill #3}}\\ \vspace{-18pt}
+\newcommand {\projectSectionSubheading}[4]{
+    \noindent \small{\textbf{#1} \textit{(#2)} : #3  \hfill \textit{#4}} \\
+    \vspace{-10pt}
 }
 
-% \newcommand{\sectionListStart}{\begin{itemize}[label={\small{\textbullet}},noitemsep]}
+\newcommand {\extracurricularSectionSubheading}[3]{
+    \noindent \small{\textbf{#1} : #2 \hfill \textit{#3}} \\
+    \vspace{-10pt}
+}
+
+\newcommand{\educationSectionSubheading}[3]{
+    \noindent \small{\textbf{#1, }\textit{#2 \hfill #3}}}
+
 
 \newcommand{\sectionListStart}{
     \begin{itemize}[label={\small{\textbullet}}, leftmargin=20pt] %leftmargin indicates spacing before bullet.
 }
 
-\newcommand{\sectionListEnd}{\end{itemize}}
+%Without bullets
+\newcommand{\sectionListStartNoBullet}{
+    \begin{itemize}[label={}, leftmargin=0pt] %leftmargin indicates spacing before bullet.
+}
+
+\newcommand{\sectionListEnd}{\end{itemize} \vspace{0pt}}
 
 \newcommand{\sectionListItem}[1]{\item \small{#1}}
 
-\newcommand{\sectionListItemWithDate}[2]{\item \small{#1 \hfill \textit{#2}} \\\vspace{-10pt}}
+\newcommand{\sectionListItemWithDate}[2]{\item \small{#1 \hfill \textit{#2}}} 
+
+\newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}} \vspace{5pt}} 
+
 
 %RESUME STARTS HERE -------------------------------------------->
 
@@ -57,8 +76,7 @@
 \LARGE{\textbf{AADARSH KENIA}}\\
 \vspace{4pt}
 \small{\Letter \hspace{2mm}akenia@cs.stonybrook.edu} | \Telefon \hspace{2mm}631 974 8070 \\
-\vspace{2pt}
-\small{github.com/aadarshkenia}
+\vspace{-10pt}
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% WORK EXPERIENCE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,69 +87,147 @@
 {Technology Analyst}{Aug '16 - Nov '16}
 \sectionListStart
     \sectionListItem
-        Used a novel approach of API-first design (Swagger) to implement a RESTful middleware that significantly improves document collaboration experience for clients.
-
+        Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through API-first design (Swagger).
+    
     \sectionListItem
-        Reduced interfacing limitations of a back-end system (BPM) by implementing a Gateway that exposes REST APIs and pub-sub capabilities over messaging queues, increased its code coverage from 50\% to 70\%.
-
+        Improved the performance of expensive API operations by deferring time consuming tasks using messaging queues which led to much faster response times.
+    
     \sectionListItem
-        Implemented a document metadata routing module as part of an in-house system that is expected to decommission legacy and thereby cut costs by \$1.7M annually.
+        Built a gateway component that assists legacy system with routing of requests to SOAP or REST web services as well as protocol conversions between XML, JSON and Google Protocol Buffers.
+    
+    \sectionListItem
+        Implemented a critical component for a new document management system that improves over existing system based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
+    
+    \sectionListItem
+        Integrated thousands of lines of code with Morgan Stanley's  stack, improved code coverage for a Java module from 50\% to 70\%.
+     
+    % \sectionListItem  
+    %     Automated the process of BPM plant's recovery from failed requests through periodic retries, ensured its stability by throttling requests sent per second.     
+    
+    % \sectionListItem
+    %     Promoted the concept of API-first design principles within the firm for good software development practices.
         
-    \sectionListItem
-        Automated the process of BPM plant's recovery from failed requests through periodic retries, ensured its stability by throttling requests sent per second. 
-        
-    \sectionListItem
-        Promoted the concept of API-first design principles within the firm for good software development practices.
-        
 \sectionListEnd
 
+%%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
+\projectSectionSubheading{GDFS}{Personal Project}{Wrote an app that automatically backs up files from local file system to Google Drive. Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.}{Ongoing}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionHeading{EDUCATION}
-\educationSectionSubheading
-{Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
+\projectSectionSubheading{Sudoku Game}{Personal Project}{Built a Sudoku game in Java including a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.}{2015-2016}
+
+\projectSectionSubheading{SBUnix Operation System}{SBU}{Built a preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. C, ASM, QEMU emulator.}{2015}
+
+% \projectSectionSubheading{Parallel Computing Course}{SBU}{Implemented distributed sorting algorithms using Message Passing Interface, analyzed performance of parallelized graph algorithms using MapReduce.}{2016}
+
+\vspace{5pt}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \sectionHeadingWithLink{PERSONAL PROJECTS}{(github.com/aadarshkenia)}
+% \projectSectionSubheading{GDFS}{Python, Google Drive SDK}{Ongoing}
+% \sectionListStart
+%     \sectionListItem
+%         App that automatically backs up files from local file system to Google Drive without human-intervention.
+%     \sectionListItem
+%         Implemented using FUSE library (File System in User Space) and server-server authentication using OAuth 2.0.
+% \sectionListEnd
+
+% \projectSectionSubheading{Sudoku Applet}{Java}{2016}
+% \sectionListStart
+%     \sectionListItem
+%         Implemented a Sudoku generator that can create puzzles of varying difficulty.
+%     \sectionListItem
+%         Built a complete game using object oriented programming principles and a naive backtracking based Sudoku solver.
+% \sectionListEnd
+
+% \projectSectionSubheading{Other projects}{Python, Selenium, JavaScript, PHP, MySQL}{2015-2017}
+% \sectionListStart
+%     \sectionListItem
+%         Iphone X Availability Checker: Script to periodically check for iPhone availability and accordingly send notifications. 
+%     \sectionListItem
+%         NYP Connect - Mini networking website built at HackRU hackathon for New York Presbyterian hospital.
+%     \sectionListItem
+%         Unify - Android app that simplifies task management by unifying events from Google Calendar and Evernote.
+% \sectionListEnd
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%% ACADEMIC PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \sectionHeading{ACADEMIC PROJECTS}
+
+% \projectSectionSubheading{SBUnix Operation System}{C, ASM, QEMU emulator}{2015}
+% \sectionListStart
+%     \sectionListItem
+%         Built an X86\_64 preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. 
+% \sectionListEnd
+
+% \projectSectionSubheading{Parallel Computing Projects}{C, ASM, QEMU emulator}{2015}
+% \sectionListStart
+%     \sectionListItem
+%         Implemented distributed sorting algorithms using Message Passing Interface, analyzed performance of parallelized graph algorithms using MapReduce.
+% \sectionListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{EXTRACURRICULAR ACTIVITIES}
+\extracurricularSectionSubheading{Mini-Projects themed on automation}{Each built over a span of a week using self learn technologies.\vspace{-10pt}}{2015-2017}
 \sectionListStart
     \sectionListItem
-        Coursework: Operating Systems, Algorithms, Asynchronous Systems, Computational Biology, Parallel Computing. 
-\sectionListEnd
-
-\educationSectionSubheading
-{University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%% PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionHeading{PROJECTS}
-\projectSectionSubheading{GDFS}{Hobby project}{Python, Drive SDK, FUSE library}{Ongoing}
-\sectionListStart
+        Iphone X Availability Checker : Wrote a script to periodically check for iPhone availability and accordingly send notifications to users. (Python, Selenium)
     \sectionListItem
-        Implemented a version of file system in user space (FUSE), that automatically backs up files from local file system to Google Drive based on callbacks. 
+        Built a Chrome extension for monitoring personal online productivity. (Chrome API, HTML, CSS, JavaScript)
 \sectionListEnd
+\vspace{-5pt}
 
-\projectSectionSubheading{Unify}{Hobby project}{Android, Calendar \& Evernote APIs}{2016}
+\extracurricularSectionSubheading{HackRU, Rutger's University Hackathon}{Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
+
+\extracurricularSectionSubheading{Volunteering, Stony Brook Child Care}{Assisted in overall personality development of children by engaging their involvement in fun learning events.}{2015}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \sectionHeading{EXTRACURRICULAR ACTIVITIES}
+% \extracurricularSectionSubheading{Side projects involving automation}{2015-2017}
+% \sectionListStart
+%     \sectionListItem
+%         Iphone X Availability Checker : Wrote a script to periodically check for iPhone availability and accordingly send notifications to users. (Python, Selenium)
+%     \sectionListItem
+%         Built a Chrome extension for monitoring personal online productivity. (Chrome API, HTML, CSS, JavaScript)
+% \sectionListEnd
+
+% \extracurricularSectionSubheading{HackRU, Rutger's University Hackathon}{2015}
+% \sectionListStart
+%     \sectionListItem
+%         Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).
+% \sectionListEnd
+
+
+% \extracurricularSectionSubheading{Volunteering, Stony Brook Child Care}{2015}
+% \sectionListStart
+%     \sectionListItem
+%         Assisted in overall personality development of children by engaging their involvement in fun learning events.
+% \sectionListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% ACHIEVEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{ACHIEVEMENTS}
 \sectionListStart
-    \sectionListItem
-        Built an app that simplifies task management by displaying a unified view of events from Google Calendar and Evernote.
-\sectionListEnd
-
-\projectSectionSubheading{SBUnix Operation System}{Stony Brook University}{C, ASM, QEMU emulator}{2015}
-\sectionListStart
-    \sectionListItem
-        Built an X86\_64 preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. 
-        
-
-\sectionListEnd
-
-%%%%%%%%%%%%%%%%%%%%%%%%%% LEADERSHIP AND AWARDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionHeading{LEADERSHIP AND AWARDS}
-\sectionListStart
-    \sectionListItemWithDate
-        {Morgan Stanley Intern Mentorship - provided guidance on internal technologies and firm values to enable interns in having a fulfilling internship experience.}{2017} 
     \sectionListItemWithDate
         {Awarded `Rookie of the year, Field \& Client Tech' - one of the top performing employees at Morgan Stanley.}{2017}
     \sectionListItemWithDate
-        {Volunteer, Stony Brook Child Care Services - assisted in overall personality development of children by engaging their involvement in fun learning events.}{2015}
+        {Top 3\%, Project Euler programming contest (hackerrank.com), 25k+ participants worldwide.}{2015}
+    \sectionListItemWithDate
+        {Runner-up, Numero Uno State Level Math Quiz, amongst 800 other participating teams.}{2014}
+    \sectionListItemWithDate
+        {Ranked in top 1.5\% in All India Engineering Entrance Exam amongst 1M+ applicants.}{2010}
 \sectionListEnd
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{EDUCATION}
+\sectionListStartNoBullet
+\eduListItemWithDate
+{Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
+
+\eduListItemWithDate
+{University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
+\sectionListEnd
 %%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{LANGUAGES AND TECHNOLOGIES}
 \sectionListStart

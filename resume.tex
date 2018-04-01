@@ -41,6 +41,11 @@
     \vspace{-10pt}
 }
 
+\newcommand {\projectSectionSubheadingAlternate}[3]{
+    \noindent \small{\textbf{#1} \textit{(#2)} \hfill \textit{#3}} \\
+    \vspace{-22pt}
+}
+
 \newcommand {\extracurricularSectionSubheading}[3]{
     \noindent \small{\textbf{#1} : #2 \hfill \textit{#3}} \\
     \vspace{-10pt}
@@ -88,15 +93,14 @@
 \sectionListStart
     \sectionListItem
         Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through API-first design (Swagger).
+    \sectionListItem
+        Proposed and designed a new architecture for speeding up certain expensive API operations using IBM messaging queues, leading to much faster response times.
     
     \sectionListItem
-        Improved the performance of expensive API operations by deferring time consuming tasks using messaging queues which led to much faster response times.
+        Implemented an important component for a new document management system that improves over existing system based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
     
     \sectionListItem
         Built a gateway component that assists legacy system with routing of requests to SOAP or REST web services as well as protocol conversions between XML, JSON and Google Protocol Buffers.
-    
-    \sectionListItem
-        Implemented a critical component for a new document management system that improves over existing system based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
     
     \sectionListItem
         Integrated thousands of lines of code with Morgan Stanley's  stack, improved code coverage for a Java module from 50\% to 70\%.
@@ -110,50 +114,53 @@
 \sectionListEnd
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
-\projectSectionSubheading{GDFS}{Personal Project}{Wrote an app that automatically backs up files from local file system to Google Drive. Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.}{Ongoing}
+% \sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
+% \projectSectionSubheading{GDFS}{Personal Project}{Built an app that automatically backs up files from local file system to Google Drive. Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.}{Ongoing}
 
-\projectSectionSubheading{Sudoku Game}{Personal Project}{Built a Sudoku game in Java including a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.}{2015-2016}
+% \projectSectionSubheading{Sudoku Game}{Personal Project}{Implemented a complete game in Java including a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.}{2016}
 
-\projectSectionSubheading{SBUnix Operation System}{SBU}{Built a preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. C, ASM, QEMU emulator.}{2015}
+% \projectSectionSubheading{Unify}{Personal Project}{Wrote a minimalistic Anrdoid app that simplifies task management by unifying events from Google Calendar and Evernote.}{2015}
+
+% \projectSectionSubheading{SBUnix Operation System}{SBU}{Built a preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. C, ASM, QEMU emulator.}{2015}
 
 % \projectSectionSubheading{Parallel Computing Course}{SBU}{Implemented distributed sorting algorithms using Message Passing Interface, analyzed performance of parallelized graph algorithms using MapReduce.}{2016}
 
-\vspace{5pt}
-
 % %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \sectionHeadingWithLink{PERSONAL PROJECTS}{(github.com/aadarshkenia)}
-% \projectSectionSubheading{GDFS}{Python, Google Drive SDK}{Ongoing}
-% \sectionListStart
-%     \sectionListItem
-%         App that automatically backs up files from local file system to Google Drive without human-intervention.
-%     \sectionListItem
-%         Implemented using FUSE library (File System in User Space) and server-server authentication using OAuth 2.0.
-% \sectionListEnd
+\sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
+\projectSectionSubheadingAlternate{Google Drive File System}{Hobby Project}{Ongoing}
+\sectionListStart
+    \sectionListItem
+        Built an app that automatically backs up files from local file system to Google Drive without human-intervention.
+    \sectionListItem
+        Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.
+\sectionListEnd
 
-% \projectSectionSubheading{Sudoku Applet}{Java}{2016}
-% \sectionListStart
-%     \sectionListItem
-%         Implemented a Sudoku generator that can create puzzles of varying difficulty.
-%     \sectionListItem
-%         Built a complete game using object oriented programming principles and a naive backtracking based Sudoku solver.
-% \sectionListEnd
+\projectSectionSubheadingAlternate{Sudoku Game}{Hobby Project}{2016}
+\sectionListStart
+    \sectionListItem
+        Implemented a complete game in Java including a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.
+\sectionListEnd
 
-% \projectSectionSubheading{Other projects}{Python, Selenium, JavaScript, PHP, MySQL}{2015-2017}
-% \sectionListStart
-%     \sectionListItem
-%         Iphone X Availability Checker: Script to periodically check for iPhone availability and accordingly send notifications. 
-%     \sectionListItem
-%         NYP Connect - Mini networking website built at HackRU hackathon for New York Presbyterian hospital.
-%     \sectionListItem
-%         Unify - Android app that simplifies task management by unifying events from Google Calendar and Evernote.
-% \sectionListEnd
+\projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{2016}
+\sectionListStart
+    \sectionListItem
+        Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup in sorting $2^{29}$ integers using 16 cores, analyzed performance of parallel graph algorithms using MapReduce.
+\sectionListEnd
+
+\projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{2015}
+\sectionListStart
+    \sectionListItem
+        Built a 64 bit preemptive OS with support for memory management, process scheduling, context switching, etc. 
+    \sectionListItem    
+        Debugged high priority bugs, implemented virtual-memory module considered as the backbone of OS and wrote system calls from scratch. 
+\sectionListEnd
+
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% ACADEMIC PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \sectionHeading{ACADEMIC PROJECTS}
 
-% \projectSectionSubheading{SBUnix Operation System}{C, ASM, QEMU emulator}{2015}
+% \projectSectionSubheading{SBUnix Operating System}{C, ASM, QEMU emulator}{2015}
 % \sectionListStart
 %     \sectionListItem
 %         Built an X86\_64 preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. 
@@ -167,20 +174,23 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{EXTRACURRICULAR ACTIVITIES}
-\extracurricularSectionSubheading{Mini-Projects themed on automation}{Each built over a span of a week using self learn technologies.\vspace{-10pt}}{2015-2017}
-\sectionListStart
-    \sectionListItem
-        Iphone X Availability Checker : Wrote a script to periodically check for iPhone availability and accordingly send notifications to users. (Python, Selenium)
-    \sectionListItem
-        Built a Chrome extension for monitoring personal online productivity. (Chrome API, HTML, CSS, JavaScript)
-\sectionListEnd
-\vspace{-5pt}
+
+% \extracurricularSectionSubheading{Mini-Projects themed on automation}{Each built over a span of a week using self learnt technologies.\vspace{-10pt}}{2015-2017}
+% \sectionListStart
+%     \sectionListItem
+%         Iphone X Availability Checker : Wrote a script to periodically check for iPhone availability and accordingly send notifications to users. (Python, Selenium)
+%     \sectionListItem
+%         Built a Chrome extension for monitoring personal online productivity. (Chrome API, HTML, CSS, JavaScript)
+% \sectionListEnd
+% \vspace{-5pt}
+
+\extracurricularSectionSubheading{Intern Mentorship Program, Morgan Stanley}{Provided guidance on internal technologies and firm values to enable interns in having a fulfilling internship experience.}{2017}
 
 \extracurricularSectionSubheading{HackRU, Rutger's University Hackathon}{Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
 
+\extracurricularSectionSubheading{Project Euler programming contest (hackerrank.com)}{Top 3\% amongst 25k+ participants worldwide.}{2015}
+
 \extracurricularSectionSubheading{Volunteering, Stony Brook Child Care}{Assisted in overall personality development of children by engaging their involvement in fun learning events.}{2015}
-
-
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \sectionHeading{EXTRACURRICULAR ACTIVITIES}
@@ -204,19 +214,6 @@
 %     \sectionListItem
 %         Assisted in overall personality development of children by engaging their involvement in fun learning events.
 % \sectionListEnd
-
-%%%%%%%%%%%%%%%%%%%%%%%%%% ACHIEVEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionHeading{ACHIEVEMENTS}
-\sectionListStart
-    \sectionListItemWithDate
-        {Awarded `Rookie of the year, Field \& Client Tech' - one of the top performing employees at Morgan Stanley.}{2017}
-    \sectionListItemWithDate
-        {Top 3\%, Project Euler programming contest (hackerrank.com), 25k+ participants worldwide.}{2015}
-    \sectionListItemWithDate
-        {Runner-up, Numero Uno State Level Math Quiz, amongst 800 other participating teams.}{2014}
-    \sectionListItemWithDate
-        {Ranked in top 1.5\% in All India Engineering Entrance Exam amongst 1M+ applicants.}{2010}
-\sectionListEnd
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -79,6 +79,10 @@
 
 \newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}}} 
 
+\newcommand{\technologiesListItem}[2]{
+\item \small{\textbf{#1}: #2
+}}
+
 
 %RESUME STARTS HERE -------------------------------------------->
 
@@ -238,13 +242,16 @@
 \eduListItemWithDate
 {University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
 \sectionListEnd
-%%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{LANGUAGES AND TECHNOLOGIES}
-\sectionListStart
-    \sectionListItem
-        Java (Proficient), Spring framework, Google Protocol Buffers, SQL, Git, JUnit, Mockito, IntelliJ IDEA.
-    \sectionListItem
-        C, Python, C++, JavaScript, Android. 
+\sectionListStartNoBullet
+    \technologiesListItem{Languages}{Java (Proficient), C, Python, JavaScript}
+    
+    \technologiesListItem{Frameworks}{Spring, Messaging Queues, JUnit, Mockito, Swagger, Selenium, MapReduce.}
+    
+    \technologiesListItem{Tools}{Git, IntelliJ IDEA, Gradle, SQL, GNU Debugger.}
+    
+    \technologiesListItem{Others}{Google Protocol Buffers, PHP, HTML, CSS, Android, Drive SDK, \LaTeX}
 \sectionListEnd
 
 %RESUME ENDS HERE -------------------------------------------->

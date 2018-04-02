@@ -9,8 +9,8 @@
 \usepackage{geometry}
 \pagenumbering{gobble}
 \geometry{letterpaper,left=0.3in,right=0.3in,top=0.30in,bottom=0.25in}
-\setitemize{topsep=10pt,itemsep=-5pt}
-
+\setitemize{topsep=10pt,itemsep=-4pt}
+% \linespread{1.0}
 
 \newcommand{\sectionHeading}[1]{
 \vspace{-15pt}
@@ -64,13 +64,20 @@
     \begin{itemize}[label={}, leftmargin=0pt] %leftmargin indicates spacing before bullet.
 }
 
-\newcommand{\sectionListEnd}{\end{itemize} \vspace{0pt}}
+%Without bullets and wider spacing
+\newcommand{\sectionListStartNoBulletWiderSpacing}{
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=-2pt] %leftmargin indicates spacing before bullet.
+}
+
+\newcommand{\sectionListEnd}{\end{itemize} \vspace{-5pt}}
 
 \newcommand{\sectionListItem}[1]{\item \small{#1}}
 
 \newcommand{\sectionListItemWithDate}[2]{\item \small{#1 \hfill \textit{#2}}} 
 
-\newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}} \vspace{5pt}} 
+\newcommand{\sectionListItemWithBoldTitle}[3]{\item \small{\textbf{#1} : #2 \hfill \textit{#3}}}
+
+\newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}}} 
 
 
 %RESUME STARTS HERE -------------------------------------------->
@@ -92,18 +99,21 @@
 {Technology Analyst}{Aug '16 - Nov '16}
 \sectionListStart
     \sectionListItem
-        Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through API-first design (Swagger).
+        Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through a novel concept of API-first design (Swagger).
     \sectionListItem
-        Proposed and designed a new architecture for speeding up certain expensive API operations using IBM messaging queues, leading to much faster response times.
+        Proposed and implemented a new architecture for speeding up certain expensive API operations using messaging queues, leading to almost 3x faster response times.
     
     \sectionListItem
-        Implemented an important component for a new document management system that improves over existing system based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
+        Implemented an important component for a new document management system that improves over existing based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
     
     \sectionListItem
-        Built a gateway component that assists legacy system with routing of requests to SOAP or REST web services as well as protocol conversions between XML, JSON and Google Protocol Buffers.
+        Built a gateway component in front of a legacy system to facilitate routing of requests to SOAP or REST web services as well as message conversions between XML, JSON and Google Protocol Buffers.
     
-    \sectionListItem
-        Integrated thousands of lines of code with Morgan Stanley's  stack, improved code coverage for a Java module from 50\% to 70\%.
+    \sectionListItem    
+        Effectively collaborated with teams based in Mumbai, Montreal and New York to work on multiple proof of concepts, some of which were deployed to production. 
+        
+    % \sectionListItem
+    %     Integrated thousands of lines of code with Morgan Stanley's  stack, improved code coverage for a Java module from 50\% to 70\%.
      
     % \sectionListItem  
     %     Automated the process of BPM plant's recovery from failed requests through periodic retries, ensured its stability by throttling requests sent per second.     
@@ -130,7 +140,7 @@
 \projectSectionSubheadingAlternate{Google Drive File System}{Hobby Project}{Ongoing}
 \sectionListStart
     \sectionListItem
-        Built an app that automatically backs up files from local file system to Google Drive without human-intervention.
+        Built an app that automatically backs up files from local file system to Google Drive based on callback events.
     \sectionListItem
         Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.
 \sectionListEnd
@@ -138,13 +148,13 @@
 \projectSectionSubheadingAlternate{Sudoku Game}{Hobby Project}{2016}
 \sectionListStart
     \sectionListItem
-        Implemented a complete game in Java including a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.
+        Implemented a complete game in Java which includes a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.
 \sectionListEnd
 
 \projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{2016}
 \sectionListStart
     \sectionListItem
-        Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup in sorting $2^{29}$ integers using 16 cores, analyzed performance of parallel graph algorithms using MapReduce.
+        Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup over serial execution in sorting $2^{29}$ integers, analyzed performance of parallel graph algorithms using MapReduce.
 \sectionListEnd
 
 \projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{2015}
@@ -173,7 +183,7 @@
 % \sectionListEnd
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionHeading{EXTRACURRICULAR ACTIVITIES}
+\sectionHeading{ADDITIONAL ACTIVITIES}
 
 % \extracurricularSectionSubheading{Mini-Projects themed on automation}{Each built over a span of a week using self learnt technologies.\vspace{-10pt}}{2015-2017}
 % \sectionListStart
@@ -184,14 +194,17 @@
 % \sectionListEnd
 % \vspace{-5pt}
 
-\extracurricularSectionSubheading{Intern Mentorship Program, Morgan Stanley}{Provided guidance on internal technologies and firm values to enable interns in having a fulfilling internship experience.}{2017}
+\sectionListStartNoBulletWiderSpacing
 
-\extracurricularSectionSubheading{HackRU, Rutger's University Hackathon}{Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
+\sectionListItemWithBoldTitle{Intern Mentorship, Morgan Stanley}{Provided insight and guidance on various areas within technology, encouraged professional networking and enabled interns to create meaningful connections across the organization.}{2017}
 
-\extracurricularSectionSubheading{Project Euler programming contest (hackerrank.com)}{Top 3\% amongst 25k+ participants worldwide.}{2015}
+\sectionListItemWithBoldTitle{HackRU, Rutger's University Hackathon}{Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
 
-\extracurricularSectionSubheading{Volunteering, Stony Brook Child Care}{Assisted in overall personality development of children by engaging their involvement in fun learning events.}{2015}
+\sectionListItemWithBoldTitle{Project Euler Plus}{Top 3\% amongst 25k+ participants in this programming contest on hackerrank.com.}{2015}
 
+\sectionListItemWithBoldTitle{Volunteering, Stony Brook Child Care}{Assisted in overall personality development of children by engaging their involvement in fun learning events.}{2015}
+
+\sectionListEnd
 % %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \sectionHeading{EXTRACURRICULAR ACTIVITIES}
 % \extracurricularSectionSubheading{Side projects involving automation}{2015-2017}

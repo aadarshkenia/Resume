@@ -58,8 +58,12 @@
     \vspace{-10pt}
 }
 
-\newcommand{\educationSectionSubheading}[3]{
-    \noindent \small{\textbf{#1, }\textit{#2 \hfill #3}}}
+\newcommand
+{\educationSectionSubheading}[3]{        \noindent \small{\textbf{#1, }\textit{#2 \hfill \textit{#3}}} \\
+    \vspace{-22pt}
+}
+
+\newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}}} 
 
 
 \newcommand{\sectionListStart}{
@@ -88,9 +92,11 @@
 \newcommand{\sectionListItemWithDate}[2]{\item \small{#1 \hfill \textit{#2}}} 
 
 
-\newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}}} 
+% \newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}}} 
 
-\newcommand{\sectionListSubItem}[1]{\subitem \small{#1}}
+\newcommand{\projectNameListItem}[4]{
+\item \small{\textbf{#1} \textit{(#2)} : #3  \hfill \textit{#4}}
+}
 
 \newcommand{\technologiesListItem}[2]{
 \item \small{\textbf{#1}: #2
@@ -142,42 +148,27 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
-% \projectSectionSubheading{GDFS}{Personal Project}{Built an app that automatically backs up files from local file system to Google Drive. Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.}{Ongoing}
 
-% \projectSectionSubheading{Sudoku Game}{Personal Project}{Implemented a complete game in Java including a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.}{2016}
+% \sectionListStartWiderSpacing
+% \projectNameListItem{Google Drive File System}{Hobby Project}{Created app that automatically backs up files from local file system to Google Drive  thereby reducing manual effort involved in managing backups. Implemented in Python using FUSE (File System in User Space) library, Drive SDK and server-server authentication using OAuth 2.0.}{Ongoing}
 
-% \projectSectionSubheading{Unify}{Personal Project}{Wrote a minimalistic Anrdoid app that simplifies task management by unifying events from Google Calendar and Evernote.}{2015}
+% \projectNameListItem{Parallel Computing Course}{Stony Brook University}{Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup over serial execution in sorting $2^{29}$ integers, analyzed performance of parallel graph algorithms using MapReduce.}{2016}
 
-% \projectSectionSubheading{SBUnix Operation System}{SBU}{Built a preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. C, ASM, QEMU emulator.}{2015}
+% \projectNameListItem{Unify}{Hobby Project}{Coded a minimalist Android app aimed at simplifying task management by combining events from Google Calendar and Evernote. Implemented using Android SDK, Evernote and Calendar APIs.}{2015}
 
-% \projectSectionSubheading{Parallel Computing Course}{SBU}{Implemented distributed sorting algorithms using Message Passing Interface, analyzed performance of parallelized graph algorithms using MapReduce.}{2016}
+% \projectNameListItem{SBUnix Operating System}{Stony Brook University}{Built a preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. C, ASM, QEMU emulator.}{2015}
+% \sectionListEnd
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
 \projectSectionSubheadingAlternate{Google Drive File System}{Hobby Project}{Ongoing}
 \sectionListStart
     \sectionListItem
-        Built an app that automatically backs up files from local file system to Google Drive based on callback events.
-    \sectionListItem
-        Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.
+        Created an app that automatically backs up files from local file system to Google Drive thereby reducing manual effort involved in managing backups. Implemented using FUSE (File System in User Space) library, Drive SDK and app authentication using OAuth 2.0.
+    % \sectionListItem
+    %     Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.
 \sectionListEnd
-
-\projectSectionSubheadingAlternate{Sudoku Game}{Hobby Project}{2016}
-\sectionListStart
-    \sectionListItem
-        Implemented a complete game in Java which includes a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.
-\sectionListEnd
-
-\projectSectionSubheadingAlternateNew{Miscellaneous Hacks}{2015-2017}
-\sectionListStart
-    \sectionListItem
-        Each built within a span of a week using self-learnt technologies like Selenium framework, Android.
-    \sectionListItem
-        iNotify! : Python script to periodically check for iPhone X availability and correspondingly send SMS notifications.
-    \sectionListItem
-        Unify: Android app that simplifies task management by combining events from Google Calendar and Evernote. 
-\sectionListEnd
-
 
 \projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{2016}
 \sectionListStart
@@ -185,13 +176,35 @@
         Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup over serial execution in sorting $2^{29}$ integers, analyzed performance of parallel graph algorithms using MapReduce.
 \sectionListEnd
 
+    
+\projectSectionSubheadingAlternate{Unify}{Hobby Project}{2015}
+\sectionListStart
+    \sectionListItem
+        Built a minimalist Android app aimed at simplifying task management by combining events from Google Calendar and Evernote. Implemented using Android SDK, Evernote and Calendar APIs.
+\sectionListEnd
+
 \projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{2015}
 \sectionListStart
     \sectionListItem
-        Built a 64 bit preemptive OS with support for memory management, process scheduling, context switching, etc. 
-    \sectionListItem    
-        Debugged high priority bugs, implemented virtual-memory module considered as the backbone of OS and wrote system calls from scratch. 
+        Coded a 64 bit preemptive operating system with support for memory management, process scheduling and in-memory file system. Implemented the crucial virtual-memory module considered as backbone of OS and wrote all system calls from scratch.
+        
 \sectionListEnd
+
+% \projectSectionSubheadingAlternate{Sudoku Game}{Hobby Project}{2016}
+% \sectionListStart
+%     \sectionListItem
+%         Built a complete game in Java using object oriented programming principles. Implemented the puzzle generator and solver using naive backtracking algorithm.
+% \sectionListEnd
+
+% \projectSectionSubheadingAlternateNew{Miscellaneous Hacks}{2015-2017}
+% \sectionListStart
+%     \sectionListItem
+%         Each built within a span of a week using self-learnt technologies like Selenium framework, Android.
+%     \sectionListItem
+%         iNotify! : Python script to periodically check for iPhone X availability and correspondingly send SMS notifications.
+%     \sectionListItem
+%         Unify: Android app that simplifies task management by combining events from Google Calendar and Evernote. 
+% \sectionListEnd
 
 
 
@@ -228,10 +241,13 @@
 
 \sectionListItemWithDate{\textbf{HackRU, Rutger's University Hackathon} : Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
 
+\sectionListItemWithDate{\textbf{Sudoku Game} : Built a Java applet simulating a Sudoku puzzle using object oriented programming principles, wrote a puzzle generator/solver using naive backtracking algorithm.}{2015}
+
+
 \sectionListItemWithDate{\textbf{Project Euler Plus} : Top 3\% amongst 25k+ participants in this programming contest on hackerrank.com.}{2015}
 
-% \sectionListSubItem
-%     
+
+% \sectionListItemWithDate{\textbf{Miscellanous Hacks} : Built various small tools in spare time, viz. a Python script for checking iPhone X availability and notify users accordingly, a Chrome extension for monitoring productivity and similarly others.}{2015-2017}
 
 \sectionListEnd
 % %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,22 +265,38 @@
 % \sectionListEnd
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \sectionHeading{EDUCATION}
+% \educationSectionSubheading
+% {Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
+% \sectionListStart
+% \sectionListItem
+%     Graduate coursework : Operating Systems, Data Structures \& Algorithms, Asynchronous Systems, Computational Biology, Parallel Computing.
+% \sectionListEnd
+    
+% \educationSectionSubheading
+% {University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
+% \sectionListStart
+% \sectionListItem
+%     Awarded 3\textsuperscript{rd} prize out of 30 projects for the project 'Virtual Stock Market' which simulates trade processing in stock markets.
+% \sectionListEnd
+
 \sectionHeading{EDUCATION}
-\sectionListStartNoBulletWiderSpacing
+\sectionListStartWiderSpacing
 \eduListItemWithDate
 {Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
 
 \eduListItemWithDate
 {University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
 \sectionListEnd
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{TECHNICAL SKILLS}
 \sectionListStart
-    \technologiesListItem{Languages}{Java (Proficient), C, Python, JavaScript.}
+    \technologiesListItem{Languages}{Java (Proficient), C, Python, JavaScript, SQL.}
     
-    \technologiesListItem{Frameworks}{Spring, Messaging Queues, JUnit, Mockito, Swagger, Selenium, MapReduce.}
+    \technologiesListItem{Frameworks}{Spring, Messaging Queues, JUnit, Mockito, Swagger.io, Selenium, MapReduce, ZooKeeper.}
     
-    \technologiesListItem{Tools}{Git, IntelliJ IDEA, Gradle, SQL, GNU Debugger.}
+    \technologiesListItem{Tools}{Git, IntelliJ IDEA, Gradle, GNU Debugger.}
     
     \technologiesListItem{Others}{Google Protocol Buffers, PHP, HTML, CSS, Android, \LaTeX.}
 \sectionListEnd

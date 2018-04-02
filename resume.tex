@@ -4,11 +4,12 @@
 \usepackage{multicol}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{enumerate}
 \usepackage[T1]{fontenc}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{geometry}
 \pagenumbering{gobble}
-\geometry{letterpaper,left=0.3in,right=0.3in,top=0.30in,bottom=0.25in}
+\geometry{letterpaper,left=0.3in,right=0.3in,top=0.3in,bottom=0.25in}
 \setitemize{topsep=10pt,itemsep=-4pt}
 % \linespread{1.0}
 
@@ -41,8 +42,14 @@
     \vspace{-10pt}
 }
 
+
 \newcommand {\projectSectionSubheadingAlternate}[3]{
     \noindent \small{\textbf{#1} \textit{(#2)} \hfill \textit{#3}} \\
+    \vspace{-22pt}
+}
+
+\newcommand {\projectSectionSubheadingAlternateNew}[2]{
+    \noindent \small{\textbf{#1} \hfill \textit{#2}} \\
     \vspace{-22pt}
 }
 
@@ -57,6 +64,11 @@
 
 \newcommand{\sectionListStart}{
     \begin{itemize}[label={\small{\textbullet}}, leftmargin=20pt] %leftmargin indicates spacing before bullet.
+}
+
+%With bullets and wider spacing
+\newcommand{\sectionListStartWiderSpacing}{
+    \begin{itemize}[label={\small{\textbullet}}, leftmargin=20pt, itemsep=-2pt] %leftmargin indicates spacing before bullet.
 }
 
 %Without bullets
@@ -75,9 +87,10 @@
 
 \newcommand{\sectionListItemWithDate}[2]{\item \small{#1 \hfill \textit{#2}}} 
 
-\newcommand{\sectionListItemWithBoldTitle}[3]{\item \small{\textbf{#1} : #2 \hfill \textit{#3}}}
 
 \newcommand{\eduListItemWithDate}[3]{\item \small{\textbf{#1}, \textit{#2} \hfill \textit{#3}}} 
+
+\newcommand{\sectionListSubItem}[1]{\subitem \small{#1}}
 
 \newcommand{\technologiesListItem}[2]{
 \item \small{\textbf{#1}: #2
@@ -155,6 +168,17 @@
         Implemented a complete game in Java which includes a puzzle generator and solver using object oriented programming principles and naive backtracking algorithm.
 \sectionListEnd
 
+\projectSectionSubheadingAlternateNew{Miscellaneous Hacks}{2015-2017}
+\sectionListStart
+    \sectionListItem
+        Each built within a span of a week using self-learnt technologies like Selenium framework, Android.
+    \sectionListItem
+        Iphone X Availability Checker : Python script to periodically check for iPhone availability and send SMS notifications.
+    \sectionListItem
+        Unify: Android app that simplifies task management by combining events from Google Calendar and Evernote. 
+\sectionListEnd
+
+
 \projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{2016}
 \sectionListStart
     \sectionListItem
@@ -198,44 +222,35 @@
 % \sectionListEnd
 % \vspace{-5pt}
 
-\sectionListStartNoBulletWiderSpacing
+% \sectionListStartNoBulletWiderSpacing
+\sectionListStartWiderSpacing
+\sectionListItemWithDate{\textbf{Intern Mentorship} \textit{(Morgan Stanley)} : Provided insight on various areas within technology division, encouraged professional networking and enabled interns to create meaningful connections across the organization.}{2017}
 
-\sectionListItemWithBoldTitle{Intern Mentorship, Morgan Stanley}{Provided insight and guidance on various areas within technology, encouraged professional networking and enabled interns to create meaningful connections across the organization.}{2017}
+\sectionListItemWithDate{\textbf{HackRU, Rutger's University Hackathon} : Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
 
-\sectionListItemWithBoldTitle{HackRU, Rutger's University Hackathon}{Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
+\sectionListItemWithDate{\textbf{Project Euler Plus} : Top 3\% amongst 25k+ participants in this programming contest on hackerrank.com.}{2015}
 
-\sectionListItemWithBoldTitle{Project Euler Plus}{Top 3\% amongst 25k+ participants in this programming contest on hackerrank.com.}{2015}
-
-\sectionListItemWithBoldTitle{Volunteering, Stony Brook Child Care}{Assisted in overall personality development of children by engaging their involvement in fun learning events.}{2015}
+% \sectionListSubItem
+%     
 
 \sectionListEnd
 % %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \sectionHeading{EXTRACURRICULAR ACTIVITIES}
-% \extracurricularSectionSubheading{Side projects involving automation}{2015-2017}
-% \sectionListStart
-%     \sectionListItem
-%         Iphone X Availability Checker : Wrote a script to periodically check for iPhone availability and accordingly send notifications to users. (Python, Selenium)
-%     \sectionListItem
-%         Built a Chrome extension for monitoring personal online productivity. (Chrome API, HTML, CSS, JavaScript)
+% \sectionHeading{ADDITIONAL ACTIVITIES}
+
+% \sectionListStartNoBulletWiderSpacing
+% \sectionListItemWithBoldTitle{Intern Mentorship, Morgan Stanley}{Provided insight and guidance on various areas within technology, encouraged professional networking and enabled interns to create meaningful connections across the organization.}{2017}
+
+% \sectionListItemWithBoldTitle{HackRU, Rutger's University Hackathon}{Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
+
+% \sectionListItemWithBoldTitle{Project Euler Plus}{Top 3\% amongst 25k+ participants in this programming contest on hackerrank.com.}{2015}
+
+% \sectionListItemWithBoldTitle{Mini Side Projects}{Wrote a Python script to automatically notify users regarding availability of iPhone X, wrote a productivity monitoring chrome app.}{2015}
+
 % \sectionListEnd
-
-% \extracurricularSectionSubheading{HackRU, Rutger's University Hackathon}{2015}
-% \sectionListStart
-%     \sectionListItem
-%         Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).
-% \sectionListEnd
-
-
-% \extracurricularSectionSubheading{Volunteering, Stony Brook Child Care}{2015}
-% \sectionListStart
-%     \sectionListItem
-%         Assisted in overall personality development of children by engaging their involvement in fun learning events.
-% \sectionListEnd
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{EDUCATION}
-\sectionListStartNoBullet
+\sectionListStartNoBulletWiderSpacing
 \eduListItemWithDate
 {Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
 
@@ -244,14 +259,14 @@
 \sectionListEnd
 % %%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{TECHNICAL SKILLS}
-\sectionListStartNoBullet
-    \technologiesListItem{Languages}{Java (Proficient), C, Python, JavaScript}
+\sectionListStart
+    \technologiesListItem{Languages}{Java (Proficient), C, Python, JavaScript.}
     
     \technologiesListItem{Frameworks}{Spring, Messaging Queues, JUnit, Mockito, Swagger, Selenium, MapReduce.}
     
     \technologiesListItem{Tools}{Git, IntelliJ IDEA, Gradle, SQL, GNU Debugger.}
     
-    \technologiesListItem{Others}{Google Protocol Buffers, PHP, HTML, CSS, Android, Drive SDK, \LaTeX}
+    \technologiesListItem{Others}{Google Protocol Buffers, PHP, HTML, CSS, Android, \LaTeX.}
 \sectionListEnd
 
 %RESUME ENDS HERE -------------------------------------------->

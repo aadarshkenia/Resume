@@ -48,7 +48,7 @@
 
 
 \newcommand {\projectSectionSubheadingAlternate}[4]{
-    \noindent \small{\textbf{#1} (#3) - #2 \hfill \textit{#4}} \\
+    \noindent \small{\textbf{#1} (#3) - \textit{#2} \hfill \textit{#4}} \\
     \vspace{-22pt}
 }
 
@@ -124,7 +124,7 @@
 {Morgan Stanley}{New York, NY}
 {Technology Associate}{Nov 2016 - Present}
 {Technology Analyst}{Aug 2016 - Nov 2016}
-\sectionListStart
+\sectionListStartWiderSpacing
     \sectionListItem
         Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through a novel concept of API-first design (Swagger).
         
@@ -135,7 +135,7 @@
         Implemented an important component for a new system that improves over existing based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
     
     \sectionListItem
-        Built a gateway component in front of a legacy system to facilitate routing of requests to SOAP or REST web services as well as message conversions between XML, JSON and Google Protocol Buffers.
+        Built a gateway for a legacy system that reduces its limitations by facilitating routing of requests to SOAP or REST web services as well as message conversions between XML, JSON and Google Protocol Buffers.
     
     \sectionListItem    
         Effectively collaborated with teams based in Mumbai, Montreal and New York to work on multiple proof of concepts, some of which were deployed to production. 
@@ -172,7 +172,7 @@
     \sectionListItem
         Created an app that automatically backs up files from local file system to Google Drive thereby reducing manual effort involved in managing backups.
     \sectionListItem
-        Implemented using callback events in FUSE (File System in User Space) lib, app authentication using OAuth 2.0.
+        Implemented using callback mechanism in FUSE (File System in User Space) lib, app authentication using OAuth 2.0.
         
         % \textit{Technologies: Python, Drive SDK, OAuth 2.0.}
 \sectionListEnd
@@ -180,13 +180,13 @@
 \projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{C++}{2016}
 \sectionListStart
     \sectionListItem
-        Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup in sorting $2^{29}$ integers in comparison to serial execution.
+        Implemented a distributed sorting algorithm using Message Passing Interface (MPI), that achieves 12x speedup in sorting 2\textsuperscript{29} integers in comparison to serial execution.
 \sectionListEnd
 
 \projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{C, ASM}{2015}
 \sectionListStart
     \sectionListItem
-        Led the development of a 64-bit preemptive OS with  memory management unit, process scheduling, system calls. 
+        Led the development of a 64-bit preemptive OS from scratch with support for memory management, process scheduling, context switching and system calls. 
     \sectionListItem
         Debugged high priority bugs and implemented the virtual-memory module, considered as backbone of OS.
 \sectionListEnd

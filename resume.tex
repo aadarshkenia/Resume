@@ -8,6 +8,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{microtype}
 \pagenumbering{gobble}
 \geometry{letterpaper,left=0.3in,right=0.3in,top=0.3in,bottom=0.2in}
 \setitemize{topsep=10pt,itemsep=-4pt}
@@ -32,8 +34,10 @@
 \newcommand{\experienceSectionSubheading}[6]{
   \vspace{-1pt}
     \small{\textbf{Morgan Stanley \hfill New York, NY}} \\
-    \small{\textit{#3} \hfill \textit{#4}} \\
-    \small{\textit{#5} \hfill \textit{#6}} \\
+    % \small{\textit{#3} \hfill \spaceskip  0.55em  \relax\textit{#4}} \\
+    \small{\textit{#3} \hfill \textls[55]{\textit{#4}}} \\
+    \small{\textit{#5} \hfill \textls[8]{\textit{#6}}} \\
+    
     \vspace{-20pt}
 }
 
@@ -43,8 +47,8 @@
 }
 
 
-\newcommand {\projectSectionSubheadingAlternate}[3]{
-    \noindent \small{\textbf{#1} \textit{(#2)} \hfill \textit{#3}} \\
+\newcommand {\projectSectionSubheadingAlternate}[4]{
+    \noindent \small{\textbf{#1} (#3) - #2 \hfill \textit{#4}} \\
     \vspace{-22pt}
 }
 
@@ -118,16 +122,17 @@
 \sectionHeading{WORK EXPERIENCE}
 \experienceSectionSubheading
 {Morgan Stanley}{New York, NY}
-{Technology Associate}{Nov '16 - Present}
-{Technology Analyst}{Aug '16 - Nov '16}
+{Technology Associate}{Nov 2016 - Present}
+{Technology Analyst}{Aug 2016 - Nov 2016}
 \sectionListStart
     \sectionListItem
         Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through a novel concept of API-first design (Swagger).
+        
     \sectionListItem
-        Proposed and implemented a new architecture for speeding up certain slower API operations using messaging queues, leading to almost 3x faster response times.
+        Proposed and implemented a new design for speeding up certain slower API operations using messaging queues, leading to 3x faster response times.
     
     \sectionListItem
-        Implemented an important component for a new document management system that improves over existing based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
+        Implemented an important component for a new system that improves over existing based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
     
     \sectionListItem
         Built a gateway component in front of a legacy system to facilitate routing of requests to SOAP or REST web services as well as message conversions between XML, JSON and Google Protocol Buffers.
@@ -162,32 +167,37 @@
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
-\projectSectionSubheadingAlternate{Google Drive File System}{Hobby Project}{Ongoing}
+\projectSectionSubheadingAlternate{Google Drive File System}{Hobby Project}{Python}{Ongoing}
 \sectionListStart
     \sectionListItem
-        Created an app that automatically backs up files from local file system to Google Drive thereby reducing manual effort involved in managing backups. Implemented using FUSE (File System in User Space) library, Drive SDK and app authentication using OAuth 2.0.
-    % \sectionListItem
-    %     Implemented in Python using FUSE library (File System in User Space), Drive SDK and OAuth 2.0.
+        Created an app that automatically backs up files from local file system to Google Drive thereby reducing manual effort involved in managing backups.
+    \sectionListItem
+        Implemented using callback events in FUSE (File System in User Space) lib, app authentication using OAuth 2.0.
+        
+        % \textit{Technologies: Python, Drive SDK, OAuth 2.0.}
 \sectionListEnd
 
-\projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{2016}
+\projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{C++}{2016}
 \sectionListStart
     \sectionListItem
         Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup over serial execution in sorting $2^{29}$ integers, analyzed performance of parallel graph algorithms using MapReduce.
 \sectionListEnd
 
     
-\projectSectionSubheadingAlternate{Unify}{Hobby Project}{2015}
+\projectSectionSubheadingAlternate{Unify}{Hobby Project}{Android, Evernote \& Calendar APIs}{2015}
 \sectionListStart
     \sectionListItem
-        Built a minimalist Android app aimed at simplifying task management by combining events from Google Calendar and Evernote. Implemented using Android SDK, Evernote and Calendar APIs.
+        Built an app for simplifying task management by combining events from Google Calendar and Evernote. 
+        
+        % \textit{Technologies: Android SDK, Evernote and Calendar APIs.}
 \sectionListEnd
 
-\projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{2015}
+\projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{C, ASM, QEMU emulator}{2015}
 \sectionListStart
     \sectionListItem
-        Coded a 64 bit preemptive operating system with support for memory management, process scheduling and in-memory file system. Implemented the crucial virtual-memory module considered as backbone of OS and wrote all system calls from scratch.
-        
+        Coded a 64 bit preemptive OS with support for memory management, process scheduling and all system calls. 
+    \sectionListItem
+        Debugged high priority bugs and implemented the virtual-memory module, considered as backbone of OS. 
 \sectionListEnd
 
 % \projectSectionSubheadingAlternate{Sudoku Game}{Hobby Project}{2016}
@@ -283,10 +293,10 @@
 \sectionHeading{EDUCATION}
 \sectionListStartWiderSpacing
 \eduListItemWithDate
-{Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug '14 - May '16}
+{Stony Brook  University}{M.S Computer Science, GPA: 3.56/4}{Aug 2014 - May 2016}
 
 \eduListItemWithDate
-{University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep '10 - May '14}
+{University of Mumbai}{B.E Computer Science, GPA: 4/4 (Aggr. 75\%)}{Sep 2010 - May 2014}
 \sectionListEnd
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% LANGUAGES AND TECHNOLOGIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

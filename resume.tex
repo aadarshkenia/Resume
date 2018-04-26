@@ -20,7 +20,7 @@
 \section*{\small{#1}}
 \vspace{-10pt}
 \hrule
-\vspace{8pt}
+\vspace{6pt}
 }
 
 \newcommand{\sectionHeadingWithLink}[2]{
@@ -129,40 +129,26 @@
         Led the initiative to improve document collaboration experience for clients by implementing RESTful web-services through a novel concept of API-first design (Swagger).
         
     \sectionListItem
-        Proposed and implemented a new design for speeding up certain slower API operations using messaging queues, leading to 3x faster response times.
+        Optimized performance of poorly performing API operations leading to 3X better response times by proposing and implementing a new design using WebSphere message queues and JMS.    
+        
+    \sectionListItem
+        Implemented an improved metadata routing component for a new system based on an event-driven, service oriented architecture and data serialization using Google Protocol Buffers. This contributed to decommissioning legacy, thereby cutting costs by \$1.7M annually.
+    
     
     \sectionListItem
-        Implemented an important component for a new system that improves over existing based on an event-driven, service oriented architecture, expected to cut costs by \$1.7M annually.
-    
+        Built a configurable middleware for routing requests to workflow systems, oversaw its evolution from proof of concept to being a core component of many production systems. Supported and maintained code base through continuous refactoring and improved code coverage from 50\% to 70\%.
+        
     \sectionListItem
-        Built a gateway for a legacy system that reduces its limitations by facilitating routing of requests to SOAP or REST web services as well as message conversions between XML, JSON and Google Protocol Buffers.
+        Saved the firm hundreds of man hours spent in supporting production systems by automating the recovery of workflow systems from failed requests through periodic retries.
     
-    \sectionListItem    
-        Effectively collaborated with teams based in Mumbai, Montreal and New York to work on multiple proof of concepts, some of which were deployed to production. 
         
     % \sectionListItem
-    %     Integrated thousands of lines of code with Morgan Stanley's  stack, improved code coverage for a Java module from 50\% to 70\%.
-     
-    % \sectionListItem  
-    %     Automated the process of BPM plant's recovery from failed requests through periodic retries, ensured its stability by throttling requests sent per second.     
+    %     Refactored thousands of lines of code in the gateway component to reduce redundancy, improved its unit test coverage from 50\% to 70\%. 
     
-    % \sectionListItem
-    %     Promoted the concept of API-first design principles within the firm for good software development practices.
-        
+    % \sectionListItem    
+    %     Effectively collaborated with teams based in Mumbai, Montreal and New York to work on multiple proof of concepts, some of which were deployed to production. 
+    
 \sectionListEnd
-
-%%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \sectionHeadingWithLink{PROJECTS}{(github.com/aadarshkenia)}
-
-% \sectionListStartWiderSpacing
-% \projectNameListItem{Google Drive File System}{Hobby Project}{Created app that automatically backs up files from local file system to Google Drive  thereby reducing manual effort involved in managing backups. Implemented in Python using FUSE (File System in User Space) library, Drive SDK and server-server authentication using OAuth 2.0.}{Ongoing}
-
-% \projectNameListItem{Parallel Computing Course}{Stony Brook University}{Implemented distributed memory sorting algorithm using Message Passing Interface, that achieves a 12x speedup over serial execution in sorting $2^{29}$ integers, analyzed performance of parallel graph algorithms using MapReduce.}{2016}
-
-% \projectNameListItem{Unify}{Hobby Project}{Coded a minimalist Android app aimed at simplifying task management by combining events from Google Calendar and Evernote. Implemented using Android SDK, Evernote and Calendar APIs.}{2015}
-
-% \projectNameListItem{SBUnix Operating System}{Stony Brook University}{Built a preemptive OS with support for memory management, process scheduling, context switching and unix like shell. Implemented all system calls from scratch. C, ASM, QEMU emulator.}{2015}
-% \sectionListEnd
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% PERSONAL PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,53 +156,36 @@
 \projectSectionSubheadingAlternate{Google Drive File System}{Hobby Project}{Python}{Ongoing}
 \sectionListStart
     \sectionListItem
-        Created an app that automatically backs up files from local file system to Google Drive thereby reducing manual effort involved in managing backups.
+        Built an app to automatically backup files from local file system to Google Drive, thereby reducing the manual effort involved in managing backups and securing disk contents in case of crashes.
     \sectionListItem
         Implemented using callback mechanism in FUSE (File System in User Space) lib, app authentication using OAuth 2.0.
         
         % \textit{Technologies: Python, Drive SDK, OAuth 2.0.}
 \sectionListEnd
 
-\projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{C++}{2016}
-\sectionListStart
-    \sectionListItem
-        Implemented a distributed sorting algorithm using Message Passing Interface (MPI), that achieves 12x speedup in sorting 2\textsuperscript{29} integers in comparison to serial execution.
-\sectionListEnd
-
+% 
 \projectSectionSubheadingAlternate{SBUnix Operating System}{Stony Brook University}{C, ASM}{2015}
 \sectionListStart
     \sectionListItem
-        Led the development of a 64-bit preemptive OS from scratch with support for memory management, process scheduling, context switching and system calls. 
+        Led the development of a 64-bit preemptive operating system kernel with support for memory management, process scheduling, in-memory file system and a linux type shell.
     \sectionListItem
-        Debugged high priority bugs and implemented the virtual-memory module, considered as backbone of OS.
+        Implemented the virtual memory module, considered as backbone of OS and wrote process creation interfaces, viz. fork \& execv system calls from scratch.
 \sectionListEnd
-    
-\projectSectionSubheadingAlternate{Unify}{Hobby Project}{Android, Evernote \& Calendar APIs}{2015}
-\sectionListStart
-    \sectionListItem
-        Built an app for simplifying task management by synchronizing events from Google Calendar and Evernote. 
+  
+% \projectSectionSubheadingAlternate{Parallel Computing Course}{Stony Brook University}{C++}{2016}
+% \sectionListStart
+%     \sectionListItem
+%         Implemented a distributed sorting algorithm using Message Passing Interface (MPI), that achieves 12x speedup in sorting 2\textsuperscript{29} integers in comparison to serial execution.
+% \sectionListEnd
+  
+  
+  
+% \projectSectionSubheadingAlternate{Unify}{Hobby Project}{Android, Evernote \& Calendar APIs}{2015}
+% \sectionListStart
+%     \sectionListItem
+%         Built an app for simplifying task management by synchronizing events from Google Calendar and Evernote. 
         
-        % \textit{Technologies: Android SDK, Evernote and Calendar APIs.}
-\sectionListEnd
-
-
-
-% \projectSectionSubheadingAlternate{Sudoku Game}{Hobby Project}{2016}
-% \sectionListStart
-%     \sectionListItem
-%         Built a complete game in Java using object oriented programming principles. Implemented the puzzle generator and solver using naive backtracking algorithm.
 % \sectionListEnd
-
-% \projectSectionSubheadingAlternateNew{Miscellaneous Hacks}{2015-2017}
-% \sectionListStart
-%     \sectionListItem
-%         Each built within a span of a week using self-learnt technologies like Selenium framework, Android.
-%     \sectionListItem
-%         iNotify! : Python script to periodically check for iPhone X availability and correspondingly send SMS notifications.
-%     \sectionListItem
-%         Unify: Android app that simplifies task management by combining events from Google Calendar and Evernote. 
-% \sectionListEnd
-
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%% ACADEMIC PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -234,8 +203,27 @@
 %         Implemented distributed sorting algorithms using Message Passing Interface, analyzed performance of parallelized graph algorithms using MapReduce.
 % \sectionListEnd
 
+%%%%%%%%%%%%%%%%%%%%%%%%%% ACHIEVEMENTS AND AWARDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionHeading{ACHIEVEMENTS \& AWARDS}
+\sectionListStart
+\sectionListItem{Top 3\%, Project Euler programming contest (hackerrank.com), 25k+ participants worldwide.}
+
+\sectionListItem{Ranked top 1\%, AIEEE competitive exam for selection into NITs amongst 1M students.}
+
+\sectionListItem{Numero Uno Math Quiz : Runner-up amongst 800+ participating teams at State Level Math Quiz.}
+
+
+\sectionListEnd
+
 %%%%%%%%%%%%%%%%%%%%%%%%%% EXTRACURRICULAR ACTIVITIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionHeading{ADDITIONAL ACTIVITIES}
+
+\sectionListStartWiderSpacing
+\sectionListItemWithDate{\textbf{Intern Mentorship} \textit{(Morgan Stanley)} : Mentored a summer intern by providing insight on various areas within technology, conducted one-one review sessions to guide through project related blockers and ensured that the overall internship experience is fun-filled and rewarding.}{2017}
+
+\sectionListItemWithDate{\textbf{HackRU, Rutger's University Hackathon} : Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. Coordinated individual responsibilities within the team and handled server side scripting to query MySQL backend. (PHP, MySQL, HTML, CSS).}{2015}
+
+% \sectionListItemWithDate{\textbf{Sudoku Game} : Built a Java applet simulating a Sudoku using object oriented programming principles, wrote a puzzle generator and solver using naive backtracking algorithm.}{2015}
 
 % \extracurricularSectionSubheading{Mini-Projects themed on automation}{Each built over a span of a week using self learnt technologies.\vspace{-10pt}}{2015-2017}
 % \sectionListStart
@@ -245,17 +233,6 @@
 %         Built a Chrome extension for monitoring personal online productivity. (Chrome API, HTML, CSS, JavaScript)
 % \sectionListEnd
 % \vspace{-5pt}
-
-% \sectionListStartNoBulletWiderSpacing
-\sectionListStartWiderSpacing
-\sectionListItemWithDate{\textbf{Intern Mentorship} \textit{(Morgan Stanley)} : Provided insight on various areas within technology, encouraged networking to create meaningful connections and made sure that interns have a fulfilling internship experience.}{2017}
-
-\sectionListItemWithDate{\textbf{HackRU, Rutger's University Hackathon} : Oversaw a team of 4 and attempted to build a basic networking website for children of New York Presbyterian hospital within 24 hrs. (PHP, MySQL, HTML, CSS).}{2015}
-
-\sectionListItemWithDate{\textbf{Sudoku Game} : Built a Java applet simulating a Sudoku using object oriented programming principles, wrote a puzzle generator and solver using naive backtracking algorithm.}{2015}
-
-
-\sectionListItemWithDate{\textbf{Project Euler Plus} : Top 3\% amongst 25k+ participants in this programming contest on hackerrank.com.}{2015}
 
 
 % \sectionListItemWithDate{\textbf{Miscellanous Hacks} : Built various small tools in spare time, viz. a Python script for checking iPhone X availability and notify users accordingly, a Chrome extension for monitoring productivity and similarly others.}{2015-2017}
@@ -309,7 +286,7 @@
     
     \technologiesListItem{Tools}{Git, IntelliJ IDEA, Gradle, GNU Debugger.}
     
-    \technologiesListItem{Others}{Google Protocol Buffers, PHP, HTML, CSS, Android, \LaTeX.}
+    \technologiesListItem{Concepts}{Object-oriented design and development, API-first design, test driven development, distributed systems, REST \& SOAP web services.}
 \sectionListEnd
 
 %RESUME ENDS HERE -------------------------------------------->
